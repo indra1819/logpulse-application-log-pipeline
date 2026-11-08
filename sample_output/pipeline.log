@@ -1,0 +1,5 @@
+2026-11-07 14:47:32,867 INFO run_id=run_20261107T144732Z_f203997b run started input=data/sample/input db=out/logpipe.db as_of=2026-11-07T00:00:00Z force=False
+2026-11-07 14:47:32,873 INFO run_id=run_20261107T144732Z_f203997b file loaded file=app_logs_000.log read=106 loaded=97 duplicate=2 rejected=7
+2026-11-07 14:47:32,877 INFO run_id=run_20261107T144732Z_f203997b file loaded file=app_logs_001.log read=106 loaded=101 duplicate=2 rejected=3
+2026-11-07 14:47:32,882 INFO run_id=run_20261107T144732Z_f203997b file loaded file=app_logs_002.log read=107 loaded=102 duplicate=2 rejected=3
+2026-11-07 14:47:32,887 INFO run_id=run_20261107T144732Z_f203997b run finished status=success read=319 loaded=300 duplicate=6 rejected=13 failed_files=0 seconds=0.02

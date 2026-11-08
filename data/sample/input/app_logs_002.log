@@ -1,0 +1,108 @@
+{"timestamp": 1793603892, "level": "info", "service": "payments", "endpoint": "/refund", "status": 204, "latency_ms": 232, "request_id": "req-00000035", "message": "batch accepted"}
+2026-11-02T13:09:31.004+05:30 error [search] request_id=req-00000009 endpoint=/suggest status=502 latency_ms=122 msg="worker said \"no capacity\" retry=3"
+2026-11-02 07:40:17,811 ERROR [notifications] request_id=req-00000132 msg="db connection reset"
+{"timestamp": 1793605383, "level": "INFO", "service": "orders", "endpoint": "/orders", "status": 200, "latency_ms": 114.0, "request_id": "req-00000051", "message": "batch accepted"}
+2026-11-01T23:51:24.000-08:00 WARN [inventory] request_id=req-00000233 latency_ms=70 msg="retry scheduled"
+{"ts": "2026-11-02T07:40:17.811Z", "severity": "ERR", "svc": "notifications", "host": "node-7", "trace": {"span": 286}, "req_id": "req-00000132", "msg": "db connection reset"}
+2026-11-02 07:58:41,706 Info [search] request_id=req-00000063 endpoint=/suggest status=204 latency_ms=224 msg="batch accepted"
+2026-11-02 08:31:52,000 info [notifications] request_id=req-00000169 endpoint=/email/send status=200 latency_ms=302 msg="request completed"
+{"ts": 1793610469000, "severity": "Info", "svc": "PAYMENTS", "host": "node-5", "trace": {"span": 556}, "path": "/invoice", "status_code": 204, "duration_s": 0.511, "req_id": "req-00000168", "msg": "request completed"}
+{"timestamp": "2026-11-02T09:07:57.714Z", "level": "error", "service": "search", "endpoint": "/suggest", "status": 502, "latency_ms": 466, "request_id": "req-00000019", "message": "upstream timeout"}
+Traceback (most recent call last):
+{"timestamp": "2026-11-02T09:09:25.000Z", "level": "ERR", "service": "orders", "endpoint": "/orders", "status": 504, "latency_ms": 1316, "request_id": "req-00000073", "message": "db connection reset"}
+2026-11-02T09:12:20.633+00:00 INFO [notifications] request_id=req-00000186 endpoint=/push/send status=204 latency_ms=190 msg="batch accepted"
+2026-11-02 09:14:33,982 Info [orders] request_id=req-00000221 endpoint=/orders status=201 latency_ms=258 msg="user session refreshed"
+2026-11-02 09:21:43,000 TRACE [notifications] request_id=req-00000272 endpoint=/push/send status=200 latency_ms=74 msg="cache lookup"
+{"ts": "2026-11-02T09:40:09.000Z", "severity": "INFO", "svc": "notifications", "host": "node-5", "trace": {"span": 137}, "duration_s": 0.083, "req_id": "req-00000171", "msg": "batch accepted"}
+2026-11-02 09:38:41,813 INFO [auth] request_id=req-00000247 msg="request completed"
+
+{"timestamp": "2026-11-02T01:42:53.000-08:00", "level": "info", "service": "search", "endpoint": "/query", "status": 200, "latency_ms": 58.0, "request_id": "req-00000174", "message": "request completed"}
+{"timestamp": 1793612772000, "level": "INFO", "service": "search", "endpoint": "/query", "status": 204, "latency_ms": 90, "request_id": "req-00000287", "message": "user session refreshed"}
+2026-11-02T09:48:12.000+00:00 INFO [search] request_id=req-00000278 endpoint=/query status=200 latency_ms=101 msg="batch accepted"
+2026-11-02 09:58:02,461 info [payments] request_id=req-00000146 latency_ms=161 msg="request completed"
+{"ts": "2026-11-02T10:02:03.000Z", "severity": "CRITICAL", "svc": "PAYMENTS", "host": "node-7", "trace": {"span": 858}, "path": "/refund", "status_code": 500, "duration_s": 0.506, "req_id": "req-00000044", "msg": "primary db unreachable"}
+{"timestamp": 1793614174006, "level": "ERROR", "service": "payments", "latency_ms": 1068, "request_id": "req-00000123", "message": "upstream timeout"}
+{"timestamp": "2026-11-02T11:17:35.677+01:00", "level": "info", "service": "orders", "endpoint": "/orders/{id}", "status": 200, "latency_ms": 120, "request_id": "req-00000267", "message": "user session refreshed"}
+{"timestamp": 1793615037790, "level": "info", "service": "inventory", "endpoint": "/stock", "status": 204, "latency_ms": 168, "request_id": "req-00000160", "message": "user session refreshed"}
+{"timestamp": 1793615107485, "level": "WARN", "service": "notifications", "endpoint": "/email/send", "status": 429, "latency_ms": "155", "request_id": "req-00000015", "message": "rate limit near"}
+{"timestamp": "2026-11-02T10:43:07.000Z", "level": "error", "service": "notifications", "endpoint": "/email/send", "status": 502, "latency_ms": 132, "request_id": "req-00000020", "message": "worker said \"no capacity\" retry=3"}
+2026-11-02T16:22:55.287+05:30 Info [notifications] request_id=req-00000251 endpoint=/email/send status=200 latency_ms=283 msg="user session refreshed"
+{"timestamp": 1793617513, "level": "Info", "service": "search", "endpoint": "/query", "status": 204, "latency_ms": 345, "request_id": "req-00000085", "message": "batch accepted"}
+{"timestamp": 1793619137003, "level": "ERROR", "service": "orders", "endpoint": "/orders", "status": 504, "latency_ms": 2170, "request_id": "req-00000219", "message": "db connection reset"}
+2026-11-02 11:38:28,648 info [orders] request_id=req-00000218 endpoint=/orders/{id} status=200 latency_ms=143 msg="user session refreshed"
+2026-11-02 11:41:43,984 Info [orders] request_id=req-00000050 endpoint=/orders/{id} status=200 latency_ms=40 msg="user session refreshed"
+{"ts": "2026-11-02T12:04:44.968Z", "severity": "INFO", "svc": "ORDERS", "host": "node-3", "trace": {"span": 54}, "path": "/orders", "status_code": 204, "duration_s": 0.104, "req_id": "req-00000066", "msg": "batch accepted"}
+{"timestamp": "2026-11-02T12:21:29.311Z", "level": "Info", "service": "orders", "endpoint": "/cart", "status": 204, "latency_ms": 135, "request_id": "req-00000201", "message": "batch accepted"}
+{"timestamp": 1793624004730, "level": "Info", "service": "orders", "endpoint": "/cart", "status": 204, "latency_ms": 154, "request_id": "req-00000231", "message": "user session refreshed"}
+2026-11-02 13:11:44,117 Info [notifications] request_id=req-00000214 endpoint=/push/send status=200 latency_ms=166 msg="batch accepted"
+{"timestamp": 1793625235000, "level": "crit", "service": "auth", "endpoint": "/logout", "status": 503, "latency_ms": 520.0, "request_id": "req-00000232", "message": "primary db unreachable"}
+2026-11-02T13:53:24.697+00:00 INFO [search] request_id=req-00000170 endpoint=/query status=204 latency_ms=81 msg="request completed"
+2026-11-02 13:56:44,390 INFO [notifications] request_id=req-00000197 endpoint=/push/send status=204 latency_ms=112 msg="request completed"
+{"ts": 1793628638000, "severity": "DEBUG", "svc": "payments", "host": "node-4", "trace": {"span": 693}, "path": "/charge", "status_code": 200, "duration_s": 0.127, "req_id": "req-00000277", "msg": "query plan chosen"}
+2026-11-02T15:19:50.687+01:00 Info [payments] request_id=req-00000116 endpoint=/refund status=201 latency_ms=216 msg="request completed"
+{"timestamp": "2026-11-02T06:41:39.915Z", "level": "WARNING", "service": "payments", "endpoint": "/invoice", "status": 404, "latency_ms": 137, "request_id": "req-09000306", "message": "retry scheduled
+2026-11-02T20:16:53.000+05:30 info [orders] request_id=req-00000105 endpoint=/orders/{id} status=200 latency_ms=217 msg="request completed"
+{"ts": "2026-11-02T15:00:40.000Z", "severity": "DEBUG", "svc": "search", "host": "node-6", "trace": {"span": 498}, "path": "/suggest", "status_code": 200, "duration_s": 0.046, "req_id": "req-00000187", "msg": "query plan chosen"}
+{"timestamp": "2026-11-02T15:10:14.870Z", "level": "Info", "service": "payments", "endpoint": "/charge", "status": 204, "latency_ms": 1614.0, "request_id": "req-00000179", "message": "request completed"}
+{"timestamp": "2026-11-02T07:16:14.881-08:00", "level": "Info", "service": "auth", "endpoint": "/token/refresh", "status": 204, "latency_ms": 3600000, "request_id": "req-00000173", "message": "request completed"}
+{"timestamp": 1793633713992, "level": "INFO", "service": "orders", "endpoint": "/cart", "status": 200, "latency_ms": 64.0, "request_id": "req-00000202", "message": "batch accepted"}
+2026-11-02T07:40:53.460-08:00 INFO [inventory] request_id=req-00000001 endpoint=/stock status=200 latency_ms=65 msg="user session refreshed"
+{"timestamp": 1793636041131, "level": "debug", "service": "notifications", "endpoint": "/email/send", "status": 200, "latency_ms": 135, "request_id": "req-00000027", "message": "query plan chosen"}
+{"ts": "2026-11-02T15:46:05.000Z", "severity": "error", "svc": "notifications", "host": "node-3", "trace": {"span": 986}, "path": "/push/send", "status_code": 504, "duration_s": 0.509, "req_id": "req-00000043", "msg": "worker said \"no capacity\" retry=3"}
+2026-11-02 15:47:57,000 info [inventory] request_id=req-00000240 msg="request completed"
+{"timestamp": "2026-11-02T15:54:51.213Z", "level": "Info", "service": "auth", "endpoint": "/login", "status": 200, "latency_ms": 69, "request_id": "req-00000296", "message": "batch accepted"}
+{"timestamp": "2026-11-01T19:08:58.641Z", "level": "INFO", "service": "payments", "endpoint": "/invoice", "status": 99, "latency_ms": 813, "request_id": "req-09000316", "message": "request completed"}
+{"timestamp": "2026-11-02T16:18:43.397Z", "level": "warn", "service": "payments", "endpoint": "/invoice", "status": 429, "latency_ms": "176", "request_id": "req-00000269", "message": "slow upstream response"}
+{"timestamp": "2026-11-02T21:50:33.000+05:30", "level": "INFO", "service": "search", "endpoint": "/query", "status": 200, "latency_ms": "62", "request_id": "req-00000138", "message": "user session refreshed"}
+{"timestamp": 1793636457000, "level": "WARN", "service": "orders", "endpoint": "/orders/{id}", "status": 404, "latency_ms": 47, "request_id": "req-00000265", "message": "slow upstream response"}
+{"timestamp": 1793638704000, "level": "warn", "service": "auth", "endpoint": "/logout", "status": 404, "latency_ms": 87, "request_id": "req-00000273", "message": "slow upstream response"}
+2026-11-02 17:00:44,000 info [auth] request_id=req-00000203 endpoint=/logout status=204 latency_ms=35 msg="batch accepted"
+{"timestamp": 1793639482, "level": "INFO", "service": "search", "endpoint": "/suggest", "status": 200, "latency_ms": 140, "request_id": "req-00000252", "message": "user session refreshed"}
+2026-11-02 17:51:46,996 info [orders] request_id=req-00000139 msg="batch accepted"
+{"ts": 1793641994384, "severity": "INFO", "svc": "notifications", "host": "node-3", "trace": {"span": 813}, "path": "/email/send", "status_code": 201, "duration_s": 0.175, "req_id": "req-00000204", "msg": "request completed"}
+{"timestamp": "2026-11-02T17:55:14.000Z", "level": "warn", "service": "payments", "endpoint": "/charge", "status": 400, "latency_ms": 107, "request_id": "req-00000254", "message": "rate limit near"}
+2026-11-02 17:55:31,415 WARN [search] request_id=req-00000106 endpoint=/query status=404 latency_ms=36 msg="rate limit near"
+2026-11-02T23:27:48.000+05:30 info [payments] request_id=req-00000289 endpoint=/charge status=200 latency_ms=276 msg="user session refreshed"
+2026-11-02T23:33:57.000+05:30 Info [search] request_id=req-00000147 endpoint=/suggest status=204 latency_ms=89 msg="user session refreshed"
+2026-11-02T10:15:29.000-08:00 WARNING [orders] request_id=req-00000112 endpoint=/orders/{id} status=429 latency_ms=98 msg="slow upstream response"
+{"timestamp": 1793644169225, "level": "crit", "service": "orders", "endpoint": "/orders/{id}", "status": 500, "latency_ms": 868, "request_id": "req-00000007", "message": "primary db unreachable"}
+{"ts": "2026-11-02T18:31:52.000Z", "severity": "DEBUG", "svc": "orders", "host": "node-2", "trace": {"span": 790}, "path": "/cart", "status_code": 200, "duration_s": 0.268, "req_id": "req-00000042", "msg": "query plan chosen"}
+2026-11-02 18:33:39,524 CRITICAL [orders] request_id=req-00000282 endpoint=/orders/{id} status=503 latency_ms=926 msg="primary db unreachable"
+{"ts": 1793645231000, "severity": "INFO", "svc": "payments", "host": "node-2", "trace": {"span": 720}, "path": "/refund", "status_code": 201, "duration_s": 0.112, "req_id": "req-00000181", "msg": "request completed"}
+2026-11-02 18:56:49,000 error [inventory] request_id=req-00000062 endpoint=/stock status=502 latency_ms=194 msg="worker said \"no capacity\" retry=3"
+{"timestamp": "2026-11-02T18:58:29.138Z", "level": "INFO", "service": "notifications", "endpoint": "/email/send", "status": 200, "latency_ms": 98, "request_id": "req-00000210", "message": "batch accepted"}
+{"timestamp": 1793646921, "level": "ERR", "service": "search", "endpoint": "/suggest", "status": 502, "latency_ms": 335, "request_id": "req-00000264", "message": "upstream timeout"}
+{"timestamp": "2026-11-02T19:21:34.774Z", "level": "error", "service": "notifications", "endpoint": "/push/send", "status": 504, "latency_ms": 1160, "request_id": "req-00000039", "message": "upstream timeout"}
+{"timestamp": "2026-11-02T19:32:20.000Z", "level": "WARNING", "service": "notifications", "endpoint": "/email/send", "status": 429, "latency_ms": 159, "request_id": "req-00000177", "message": "rate limit near"}
+{"timestamp": "2026-11-02T19:38:29.210Z", "level": "info", "service": "orders", "endpoint": "/orders", "status": 201, "latency_ms": 64.0, "request_id": "req-00000104", "message": "request completed"}
+2026-11-02 20:03:41,461 error [auth] request_id=req-00000134 endpoint=/login status=502 latency_ms=177 msg="upstream timeout"
+{"ts": 1793651381999, "severity": "debug", "svc": "inventory", "host": "node-4", "trace": {"span": 102}, "path": "/stock/reserve", "status_code": 200, "duration_s": 0.042, "req_id": "req-00000150", "msg": "cache lookup"}
+{"timestamp": "2026-11-02T12:30:41.000-08:00", "level": "debug", "service": "orders", "endpoint": "/cart", "status": 200, "latency_ms": 114, "request_id": "req-00000037", "message": "cache lookup"}
+2026-11-02 20:32:27,000 warn [search] request_id=req-00000024 endpoint=/suggest status=429 latency_ms=152 msg="rate limit near"
+{"ts": 1793649821461, "severity": "error", "svc": "auth", "host": "node-3", "trace": {"span": 484}, "path": "/login", "status_code": 502, "duration_s": 0.177, "req_id": "req-00000134", "msg": "upstream timeout"}
+{"ts": 1793653125117, "severity": "warn", "svc": "inventory", "host": "node-3", "trace": {"span": 468}, "path": "/stock", "status_code": 404, "duration_s": 0.17, "req_id": "req-00000295", "msg": "slow upstream response"}
+2026-11-02T21:13:18.984+00:00 warn [notifications] request_id=req-00000060 endpoint=/email/send status=429 latency_ms=218 msg="slow upstream response"
+{"timestamp": "2026-11-02T21:29:31.000Z", "level": "info", "service": "inventory", "endpoint": "/stock/reserve", "status": 201, "latency_ms": 49, "request_id": "req-00000118", "message": "batch accepted"}
+{"timestamp": 1793655147053, "level": "INFO", "service": "orders", "endpoint": "/orders/{id}", "status": 204, "latency_ms": 137, "request_id": "req-00000068", "message": "request completed"}
+2026-11-02 21:49:16,486 Info [search] request_id=req-00000153 endpoint=/query status=200 latency_ms=36 msg="user session refreshed"
+{"timestamp": "2026-11-02T22:57:19.070+01:00", "level": "ERROR", "service": "inventory", "endpoint": "/stock", "status": 502, "latency_ms": 309, "request_id": "req-00000014", "message": "worker said \"no capacity\" retry=3"}
+{"timestamp": "2026-11-03T03:34:37.631+05:30", "level": "Info", "service": "notifications", "endpoint": "/email/send", "status": 200, "latency_ms": 195, "request_id": "req-00000216", "message": "batch accepted"}
+{"ts": 1793657196523, "severity": "info", "svc": "notifications", "host": "node-4", "trace": {"span": 328}, "path": "/push/send", "status_code": 200, "duration_s": 0.114, "req_id": "req-00000108", "msg": "batch accepted"}
+{"timestamp": "2026-11-02T22:21:59.176+00:00", "level": "DEBUG", "service": "auth", "endpoint": "/token/refresh", "status": 200, "latency_ms": 61.0, "request_id": "req-00000189", "message": "query plan chosen"}
+2026-11-02T23:23:35.000+01:00 Info [payments] request_id=req-00000026 endpoint=/invoice status=204 latency_ms=277 msg="user session refreshed"
+{"timestamp": 1793658693, "level": "INFO", "service": "search", "endpoint": "/suggest", "status": 200, "latency_ms": 74, "request_id": "req-00000081", "message": "batch accepted"}
+2026-11-02 22:32:18,398 Info [notifications] request_id=req-00000209 endpoint=/push/send status=201 latency_ms=344 msg="user session refreshed"
+2026-11-02T14:36:12.000-08:00 Info [search] request_id=req-00000005 endpoint=/query status=200 latency_ms=152 msg="batch accepted"
+2026-11-02 22:37:36,548 INFO [orders] request_id=req-00000293 endpoint=/orders status=200 latency_ms=121 msg="user session refreshed"
+{"ts": "2026-11-02T22:47:59.000Z", "severity": "Info", "svc": "notifications", "host": "node-1", "trace": {"span": 117}, "path": "/push/send", "status_code": 200, "duration_s": 0.243, "req_id": "req-00000100", "msg": "request completed"}
+2026-11-02 23:02:21,132 TRACE [payments] request_id=req-00000249 endpoint=/refund status=200 latency_ms=209 msg="query plan chosen"
+{"timestamp": "2026-11-03T00:03:12.413+01:00", "level": "warn", "service": "inventory", "endpoint": "/stock", "status": 400, "latency_ms": 83, "request_id": "req-00000016", "message": "retry scheduled"}
+{"timestamp": "2026-11-03T00:19:21.922+01:00", "level": "Info", "service": "inventory", "endpoint": "/stock", "status": 200, "latency_ms": 90, "request_id": "req-00000013", "message": "request completed"}
+2026-11-02T15:28:42.000-08:00 Info [inventory] request_id=req-00000074 msg="batch accepted"
+{"timestamp": 1793663096128, "level": "warn", "service": "auth", "endpoint": "/logout", "status": 429, "latency_ms": 122, "request_id": "req-00000129", "message": "rate limit near"}
+2026-11-02 23:49:19,868 Info [payments] request_id=req-00000099 endpoint=/refund status=200 latency_ms=326 msg="batch accepted"
+2026-11-02T15:53:21.000-08:00 INFO [auth] request_id=req-00000067 msg="batch accepted"
+{"ts": "2026-11-02T23:55:04.000Z", "severity": "Info", "svc": "inventory", "host": "node-6", "trace": {"span": 572}, "path": "/stock", "status_code": 200, "duration_s": 0.057, "req_id": "req-00000234", "msg": "user session refreshed"}
+{"timestamp": 1793663913528, "level": "Info", "service": "payments", "endpoint": "/charge", "status": 200, "latency_ms": "154", "request_id": "req-00000036", "message": "request completed"}
+2026-11-01T09:01:35.635-08:00 ERROR [auth] request_id=req-00000087 endpoint=/token/refresh status=502 latency_ms=311 msg="worker said \"no capacity\" retry=3"
+2026-11-01 00:41:52,200 warn [search] request_id=req-00000212 endpoint=/suggest status=404 latency_ms=52 msg="slow upstream response"

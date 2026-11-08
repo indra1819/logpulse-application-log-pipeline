@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "logpulse-application-log-pipeline"
+version = "1.1.0"
+description = "LogPulse: a reproducible application-log ingestion, validation, and analytics pipeline"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+dependencies = []
+
+[project.scripts]
+logpipe = "logpipe.cli:main"
+
+[tool.setuptools]
+packages = ["logpipe", "logpipe.adapters"]

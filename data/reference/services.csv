@@ -1,0 +1,12 @@
+service,owner_team
+auth,identity
+payments,billing
+search,discovery
+orders,commerce
+notifications,messaging
+inventory,supply
+nasa_web,public-web
+nova,openstack-compute
+nova-api,openstack-compute
+nova-compute,openstack-compute
+nova-scheduler,openstack-compute

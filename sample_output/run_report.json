@@ -1,0 +1,159 @@
+{
+  "run_id": "run_20261107T144732Z_f203997b",
+  "status": "success",
+  "failure_reason": null,
+  "started_at": "2026-11-07T14:47:32Z",
+  "ended_at": "2026-11-07T14:47:32Z",
+  "duration_seconds": 0.025,
+  "input_path": "data/sample/input",
+  "as_of": "2026-11-07T00:00:00Z",
+  "force": false,
+  "files_total": 3,
+  "files_succeeded": 3,
+  "files_skipped": 0,
+  "files_failed": 0,
+  "rows_read": 319,
+  "rows_loaded": 300,
+  "rows_duplicate": 6,
+  "rows_replayed": 0,
+  "rows_rejected": 13,
+  "blank_lines": 1,
+  "reject_reasons_this_run": {
+    "latency_out_of_range": 1,
+    "invalid_timestamp": 1,
+    "future_timestamp": 1,
+    "invalid_latency": 1,
+    "invalid_severity": 1,
+    "invalid_encoding": 1,
+    "missing_required_field:level": 1,
+    "missing_required_field:service": 1,
+    "missing_required_field:timestamp": 1,
+    "unknown_service": 1,
+    "malformed_line": 1,
+    "malformed_json": 1,
+    "invalid_status": 1
+  },
+  "store_total_events": 300,
+  "timings_seconds": {
+    "ingest": 0.014,
+    "summarize_and_reconcile": 0.005
+  },
+  "rows_per_second_ingest": 22339,
+  "files": [
+    {
+      "source_file": "app_logs_000.log",
+      "status": "success",
+      "rows_read": 106,
+      "rows_loaded": 97,
+      "rows_duplicate": 2,
+      "rows_replayed": 0,
+      "rows_rejected": 7,
+      "blank_lines": 0,
+      "out_of_order_rows": 10,
+      "rows_with_unknown_fields": 11,
+      "reject_reasons": {
+        "latency_out_of_range": 1,
+        "invalid_timestamp": 1,
+        "future_timestamp": 1,
+        "invalid_latency": 1,
+        "invalid_severity": 1,
+        "invalid_encoding": 1,
+        "missing_required_field:level": 1
+      }
+    },
+    {
+      "source_file": "app_logs_001.log",
+      "status": "success",
+      "rows_read": 106,
+      "rows_loaded": 101,
+      "rows_duplicate": 2,
+      "rows_replayed": 0,
+      "rows_rejected": 3,
+      "blank_lines": 0,
+      "out_of_order_rows": 7,
+      "rows_with_unknown_fields": 11,
+      "reject_reasons": {
+        "missing_required_field:service": 1,
+        "missing_required_field:timestamp": 1,
+        "unknown_service": 1
+      }
+    },
+    {
+      "source_file": "app_logs_002.log",
+      "status": "success",
+      "rows_read": 107,
+      "rows_loaded": 102,
+      "rows_duplicate": 2,
+      "rows_replayed": 0,
+      "rows_rejected": 3,
+      "blank_lines": 1,
+      "out_of_order_rows": 7,
+      "rows_with_unknown_fields": 17,
+      "reject_reasons": {
+        "malformed_line": 1,
+        "malformed_json": 1,
+        "invalid_status": 1
+      }
+    }
+  ],
+  "reconciliation": {
+    "passed": true,
+    "checks": [
+      {
+        "name": "file_row_balance",
+        "passed": true,
+        "detail": "every loaded file: rows_read = loaded + duplicate + replayed + rejected (0 files out of balance)"
+      },
+      {
+        "name": "store_matches_run_ledger",
+        "passed": true,
+        "detail": "log_events rows=300, sum of rows_loaded across runs=300"
+      },
+      {
+        "name": "event_id_unique",
+        "passed": true,
+        "detail": "300 distinct ids for 300 rows"
+      },
+      {
+        "name": "referential_integrity_service",
+        "passed": true,
+        "detail": "0 events reference a service missing from dim_service"
+      },
+      {
+        "name": "events_traceable_to_source",
+        "passed": true,
+        "detail": "0 events lack source_file/line_no"
+      },
+      {
+        "name": "summary_event_count_matches_store",
+        "passed": true,
+        "detail": "summary events=300, store rows=300"
+      },
+      {
+        "name": "summary_error_count_matches_store",
+        "passed": true,
+        "detail": "summary errors=43, store errors=43"
+      },
+      {
+        "name": "published_csv_matches_store",
+        "passed": true,
+        "detail": "clean_events.csv rows=300 (store 300), rejected_records.csv rows=19 (store 19)"
+      },
+      {
+        "name": "labels_loaded_count",
+        "passed": true,
+        "detail": "expected=300, actual=300"
+      },
+      {
+        "name": "labels_duplicate_count",
+        "passed": true,
+        "detail": "expected=6, actual=6"
+      },
+      {
+        "name": "labels_reject_reasons",
+        "passed": true,
+        "detail": "all reject reasons match"
+      }
+    ]
+  }
+}

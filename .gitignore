@@ -1,0 +1,26 @@
+__pycache__/
+*.pyc
+out/
+out*/
+data/generated/
+*.sqlite
+*.db
+*.db-wal
+*.db-shm
+.pytest_cache/
+.venv/
+
+# real datasets are downloaded by the user, never committed
+data/real/
+
+# downloaded data and local test artifacts
+data/full/
+data/real/
+*.tar.gz
+*.egg-info/
+# Local real-data execution outputs
+real_data_runs/*
+!real_data_runs/*/
+real_data_runs/*/**
+!real_data_runs/*/NOTICE.md
+.venv312/

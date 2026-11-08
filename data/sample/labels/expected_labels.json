@@ -1,0 +1,24 @@
+{
+  "seed": 42,
+  "rows_requested": 300,
+  "input_files": 3,
+  "total_data_lines": 319,
+  "blank_lines": 1,
+  "expected_loaded": 300,
+  "expected_duplicates": 6,
+  "expected_rejects": {
+    "malformed_json": 1,
+    "malformed_line": 1,
+    "missing_required_field:timestamp": 1,
+    "missing_required_field:level": 1,
+    "missing_required_field:service": 1,
+    "invalid_timestamp": 1,
+    "invalid_severity": 1,
+    "unknown_service": 1,
+    "invalid_latency": 1,
+    "latency_out_of_range": 1,
+    "invalid_status": 1,
+    "future_timestamp": 1,
+    "invalid_encoding": 1
+  }
+}

@@ -1,0 +1,3 @@
+# logpipe uses only the Python standard library (Python 3.9+; developed and tested on 3.12).
+# Tests use the built-in unittest module, so nothing needs to be installed.
+# Optional: `pip install pytest` also works (pytest can run the unittest-style tests unchanged).

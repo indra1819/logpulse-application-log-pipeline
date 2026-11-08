@@ -1,0 +1,133 @@
+LogPulse automated test execution
+=================================
+Environment: Linux-6.18.57-x86_64-with-glibc2.41
+Python: 3.13.5
+Command: python -m unittest discover -s tests -t . -v
+
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 785, in warm_spreadsheet_runtime
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 718, in _warm_feature_flows
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 509, in _warm_drawing_and_image_flows
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/generated/interface/models.py", line 32861, in bring_to_front
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/remote.py", line 764, in __call__
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/client.py", line 175, in call
+artifact_tool.rpc.client.RemoteError: Element ordering requires an owning element collection.
+test_dash_bytes_and_embedded_quote_and_odd_request (tests.test_clf.ClfParserTests.test_dash_bytes_and_embedded_quote_and_odd_request) ... ok
+test_fields_and_derived_level (tests.test_clf.ClfParserTests.test_fields_and_derived_level) ... ok
+test_truncated_line_is_malformed (tests.test_clf.ClfParserTests.test_truncated_line_is_malformed) ... ok
+test_corrupt_gzip_fails_that_file_only (tests.test_clf.ClfPipelineTests.test_corrupt_gzip_fails_that_file_only) ... file failed and was rolled back file=bad.gz reason=BadGzipFile: Not a gzipped file (b'th')
+ok
+test_dash_status_and_bad_bytes_and_truncated_lines_are_quarantined (tests.test_clf.ClfPipelineTests.test_dash_status_and_bad_bytes_and_truncated_lines_are_quarantined) ... possible schema change: 75% of rows rejected file=a.log
+ok
+test_different_hosts_same_second_are_different_events (tests.test_clf.ClfPipelineTests.test_different_hosts_same_second_are_different_events) ... ok
+test_gzip_input_is_read_directly (tests.test_clf.ClfPipelineTests.test_gzip_input_is_read_directly) ... ok
+test_real_lines_load_with_utc_conversion_and_error_rules (tests.test_clf.ClfPipelineTests.test_real_lines_load_with_utc_conversion_and_error_rules) ... ok
+test_same_host_url_and_second_is_a_duplicate (tests.test_clf.ClfPipelineTests.test_same_host_url_and_second_is_a_duplicate) ... ok
+test_without_clf_service_lines_are_rejected_not_guessed (tests.test_clf.ClfPipelineTests.test_without_clf_service_lines_are_rejected_not_guessed) ... possible schema change: 100% of rows rejected file=a.log
+ok
+test_generate_command_writes_separate_input_and_labels (tests.test_cli.CliTests.test_generate_command_writes_separate_input_and_labels) ... ok
+test_missing_services_file_gives_clear_error_not_traceback (tests.test_cli.CliTests.test_missing_services_file_gives_clear_error_not_traceback) ... ok
+test_query_rejects_writes_and_reports_sql_errors_cleanly (tests.test_cli.CliTests.test_query_rejects_writes_and_reports_sql_errors_cleanly) ... ok
+test_run_command_executes_pipeline_and_returns_success (tests.test_cli.CliTests.test_run_command_executes_pipeline_and_returns_success) ... ok
+test_split_sql_ignores_semicolons_in_strings_and_comments (tests.test_cli.CliTests.test_split_sql_ignores_semicolons_in_strings_and_comments) ... ok
+test_unreadable_labels_file_gives_clear_error (tests.test_cli.CliTests.test_unreadable_labels_file_gives_clear_error) ... ok
+test_different_seed_changes_data (tests.test_generator.GeneratorTests.test_different_seed_changes_data) ... ok
+test_pipeline_output_matches_the_separate_labels_file (tests.test_generator.GeneratorTests.test_pipeline_output_matches_the_separate_labels_file) ... ok
+test_same_seed_gives_byte_identical_output (tests.test_generator.GeneratorTests.test_same_seed_gives_byte_identical_output) ... ok
+test_synonyms (tests.test_normalize.SeverityTests.test_synonyms) ... ok
+test_unknown_or_non_string_raises (tests.test_normalize.SeverityTests.test_unknown_or_non_string_raises) ... ok
+test_apache_clf_format (tests.test_normalize.TimestampTests.test_apache_clf_format) ... ok
+test_epoch_seconds_and_milliseconds (tests.test_normalize.TimestampTests.test_epoch_seconds_and_milliseconds) ... ok
+test_hour_bucket (tests.test_normalize.TimestampTests.test_hour_bucket) ... ok
+test_invalid_values_raise (tests.test_normalize.TimestampTests.test_invalid_values_raise) ... ok
+test_iso_variants_normalize_to_utc (tests.test_normalize.TimestampTests.test_iso_variants_normalize_to_utc) ... ok
+test_offset_can_cross_midnight (tests.test_normalize.TimestampTests.test_offset_can_cross_midnight) ... ok
+test_client_ip_and_forwarded_list (tests.test_openstack.OpenStackParserTests.test_client_ip_and_forwarded_list) ... ok
+test_http_request_line (tests.test_openstack.OpenStackParserTests.test_http_request_line) ... ok
+test_loghub_style_file_name_prefix_gives_the_service (tests.test_openstack.OpenStackParserTests.test_loghub_style_file_name_prefix_gives_the_service) ... ok
+test_non_http_line_keeps_message_only (tests.test_openstack.OpenStackParserTests.test_non_http_line_keeps_message_only) ... ok
+test_traceback_continuation_line_is_malformed (tests.test_openstack.OpenStackParserTests.test_traceback_continuation_line_is_malformed) ... ok
+test_latency_error_rate_and_units (tests.test_openstack.OpenStackPipelineTests.test_latency_error_rate_and_units) ... ok
+test_unknown_openstack_service_is_quarantined_with_reason (tests.test_openstack.OpenStackPipelineTests.test_unknown_openstack_service_is_quarantined_with_reason) ... possible schema change: 100% of rows rejected file=x.log
+ok
+test_json_line (tests.test_parser_validate.ParserTests.test_json_line) ... ok
+test_json_that_is_not_an_object (tests.test_parser_validate.ParserTests.test_json_that_is_not_an_object) ... ok
+test_malformed_inputs (tests.test_parser_validate.ParserTests.test_malformed_inputs) ... ok
+test_text_line_free_text_becomes_message (tests.test_parser_validate.ParserTests.test_text_line_free_text_becomes_message) ... ok
+test_text_line_with_quoted_message_containing_equals_and_quotes (tests.test_parser_validate.ParserTests.test_text_line_with_quoted_message_containing_equals_and_quotes) ... ok
+test_boundary_values_are_accepted (tests.test_parser_validate.ValidateTests.test_boundary_values_are_accepted) ... ok
+test_event_id_is_deterministic_and_layout_independent (tests.test_parser_validate.ValidateTests.test_event_id_is_deterministic_and_layout_independent) ... ok
+test_happy_path_normalizes (tests.test_parser_validate.ValidateTests.test_happy_path_normalizes) ... ok
+test_missing_and_null_required_fields (tests.test_parser_validate.ValidateTests.test_missing_and_null_required_fields) ... ok
+test_other_reject_reasons (tests.test_parser_validate.ValidateTests.test_other_reject_reasons) ... ok
+test_schema_drift_aliases_and_unknown_fields (tests.test_parser_validate.ValidateTests.test_schema_drift_aliases_and_unknown_fields) ... ok
+test_duplicate_within_a_file_and_across_files_in_different_layouts (tests.test_pipeline.DuplicateTests.test_duplicate_within_a_file_and_across_files_in_different_layouts) ... ok
+test_same_content_different_request_id_is_not_a_duplicate (tests.test_pipeline.DuplicateTests.test_same_content_different_request_id_is_not_a_duplicate) ... ok
+test_database_parent_directory_is_created (tests.test_pipeline.EmptyAndMissingInputTests.test_database_parent_directory_is_created) ... ok
+test_empty_directory_is_a_successful_empty_batch (tests.test_pipeline.EmptyAndMissingInputTests.test_empty_directory_is_a_successful_empty_batch) ... empty batch: no input files found under /tmp/tmpp12r5wcl/input
+ok
+test_empty_file_and_blank_lines_only (tests.test_pipeline.EmptyAndMissingInputTests.test_empty_file_and_blank_lines_only) ... ok
+test_missing_input_path_fails_visibly (tests.test_pipeline.EmptyAndMissingInputTests.test_missing_input_path_fails_visibly) ... input path not found: /tmp/tmpkes4h21p/input/does_not_exist
+ok
+test_loads_json_and_text_lines_and_summarizes (tests.test_pipeline.HappyPathTests.test_loads_json_and_text_lines_and_summarizes) ... ok
+test_run_metrics_are_recorded (tests.test_pipeline.HappyPathTests.test_run_metrics_are_recorded) ... ok
+test_appended_file_is_picked_up_and_old_files_skipped (tests.test_pipeline.IdempotencyTests.test_appended_file_is_picked_up_and_old_files_skipped) ... ok
+test_empty_run_still_publishes_header_only_csvs (tests.test_pipeline.IdempotencyTests.test_empty_run_still_publishes_header_only_csvs) ... ok
+test_forced_reprocessing_does_not_duplicate_or_misreport (tests.test_pipeline.IdempotencyTests.test_forced_reprocessing_does_not_duplicate_or_misreport) ... ok
+test_published_csvs_match_store_and_awkward_raw_lines_round_trip (tests.test_pipeline.IdempotencyTests.test_published_csvs_match_store_and_awkward_raw_lines_round_trip) ... ok
+test_reconciliation_flags_a_published_csv_that_disagrees_with_the_store (tests.test_pipeline.IdempotencyTests.test_reconciliation_flags_a_published_csv_that_disagrees_with_the_store) ... ok
+test_reject_is_removed_once_the_line_loads_after_reference_fix (tests.test_pipeline.IdempotencyTests.test_reject_is_removed_once_the_line_loads_after_reference_fix) ... ok
+test_rerun_of_same_input_changes_nothing (tests.test_pipeline.IdempotencyTests.test_rerun_of_same_input_changes_nothing) ... ok
+test_boundary_latencies_load_and_just_over_is_rejected (tests.test_pipeline.LatencyEdgeCaseTests.test_boundary_latencies_load_and_just_over_is_rejected) ... ok
+test_late_arriving_file_corrects_earlier_hour_summary (tests.test_pipeline.OrderAndLatenessTests.test_late_arriving_file_corrects_earlier_hour_summary) ... ok
+test_offset_timestamps_land_in_the_correct_utc_hour (tests.test_pipeline.OrderAndLatenessTests.test_offset_timestamps_land_in_the_correct_utc_hour) ... ok
+test_out_of_order_input_gives_identical_summaries_and_is_flagged (tests.test_pipeline.OrderAndLatenessTests.test_out_of_order_input_gives_identical_summaries_and_is_flagged) ... ok
+test_failed_file_is_isolated_then_loaded_on_retry (tests.test_pipeline.PartialFailureTests.test_failed_file_is_isolated_then_loaded_on_retry) ... file failed and was rolled back file=b.log reason=OSError: disk went away
+ok
+test_mid_file_crash_rolls_back_the_whole_file (tests.test_pipeline.PartialFailureTests.test_mid_file_crash_rolls_back_the_whole_file) ... file failed and was rolled back file=a.log reason=RuntimeError: worker killed
+ok
+test_invalid_utf8_line_is_rejected_not_fatal (tests.test_pipeline.RejectTests.test_invalid_utf8_line_is_rejected_not_fatal) ... ok
+test_malformed_and_invalid_records_are_quarantined_with_traceability (tests.test_pipeline.RejectTests.test_malformed_and_invalid_records_are_quarantined_with_traceability) ... possible schema change: 88% of rows rejected file=bad.log
+ok
+test_windows_line_endings_and_bom (tests.test_pipeline.RejectTests.test_windows_line_endings_and_bom) ... ok
+test_failed_reconciliation_sets_run_status_failed (tests.test_pipeline.SafetyRegressionTests.test_failed_reconciliation_sets_run_status_failed) ... ok
+test_file_mutated_during_ingestion_is_rolled_back_and_retryable (tests.test_pipeline.SafetyRegressionTests.test_file_mutated_during_ingestion_is_rolled_back_and_retryable) ... file failed and was rolled back file=a.log reason=RuntimeError: input_file_changed_during_ingestion
+ok
+test_output_directory_inside_input_is_never_reingested (tests.test_pipeline.SafetyRegressionTests.test_output_directory_inside_input_is_never_reingested) ... ok
+test_file_with_mostly_rejected_rows_is_flagged_in_the_log (tests.test_pipeline.SchemaDriftTests.test_file_with_mostly_rejected_rows_is_flagged_in_the_log) ... ok
+test_renamed_fields_load_and_unexpected_fields_are_counted (tests.test_pipeline.SchemaDriftTests.test_renamed_fields_load_and_unexpected_fields_are_counted) ... ok
+test_export_query_to_csv_handles_null_and_special_characters (tests.test_report.ReportCsvTests.test_export_query_to_csv_handles_null_and_special_characters) ... ok
+test_write_csv_handles_special_characters (tests.test_report.ReportCsvTests.test_write_csv_handles_special_characters) ... ok
+test_group_with_no_latency_values (tests.test_report.ReportMathTests.test_group_with_no_latency_values) ... ok
+test_nearest_rank_percentiles (tests.test_report.ReportMathTests.test_nearest_rank_percentiles) ... ok
+test_percentile_boundary_values (tests.test_report.ReportMathTests.test_percentile_boundary_values) ... ok
+test_percentile_rejects_invalid_percentage (tests.test_report.ReportMathTests.test_percentile_rejects_invalid_percentage) ... ok
+test_summary_group_known_numbers (tests.test_report.ReportMathTests.test_summary_group_known_numbers) ... ok
+test_failed_refresh_restores_previous_summary (tests.test_report.SummaryRefreshTests.test_failed_refresh_restores_previous_summary) ... ok
+test_refresh_summary_table_replaces_existing_rows (tests.test_report.SummaryRefreshTests.test_refresh_summary_table_replaces_existing_rows) ... ok
+test_refresh_works_inside_existing_transaction (tests.test_report.SummaryRefreshTests.test_refresh_works_inside_existing_transaction) ... ok
+test_invalid_as_of_and_missing_input_are_reported (tests.test_robustness.CliErrorTests.test_invalid_as_of_and_missing_input_are_reported) ... ok
+test_query_on_a_missing_database_fails_cleanly (tests.test_robustness.CliErrorTests.test_query_on_a_missing_database_fails_cleanly) ... ok
+test_bad_utc_offset_and_bad_month_are_value_errors_not_crashes (tests.test_robustness.ErrorPathTests.test_bad_utc_offset_and_bad_month_are_value_errors_not_crashes) ... ok
+test_boolean_latency_is_rejected (tests.test_robustness.ErrorPathTests.test_boolean_latency_is_rejected) ... ok
+test_commit_every_batching_gives_the_same_result_as_one_transaction_per_file (tests.test_robustness.ErrorPathTests.test_commit_every_batching_gives_the_same_result_as_one_transaction_per_file) ... ok
+test_json_adapter_rejects_values_that_are_not_objects (tests.test_robustness.ErrorPathTests.test_json_adapter_rejects_values_that_are_not_objects) ... ok
+test_output_folder_and_database_inside_the_input_folder_are_never_ingested (tests.test_robustness.ErrorPathTests.test_output_folder_and_database_inside_the_input_folder_are_never_ingested) ... ok
+test_summary_refresh_is_atomic_when_it_fails_midway (tests.test_robustness.ErrorPathTests.test_summary_refresh_is_atomic_when_it_fails_midway) ... ok
+test_summary_step_failure_fails_the_run_keeps_loaded_events_and_a_rerun_recovers (tests.test_robustness.ErrorPathTests.test_summary_step_failure_fails_the_run_keeps_loaded_events_and_a_rerun_recovers) ... summary step failed: boom
+ok
+test_unreadable_file_is_a_partial_failure_other_files_load_and_retry_recovers (tests.test_robustness.ErrorPathTests.test_unreadable_file_is_a_partial_failure_other_files_load_and_retry_recovers) ... file failed file=a.log reason=PermissionError: denied
+ok
+test_wrong_expected_labels_fail_reconciliation_and_name_the_difference (tests.test_robustness.ErrorPathTests.test_wrong_expected_labels_fail_reconciliation_and_name_the_difference) ... ok
+test_parser_and_validator_only_ever_accept_or_reject_never_crash (tests.test_robustness.FuzzTests.test_parser_and_validator_only_ever_accept_or_reject_never_crash) ... ok
+test_pipeline_balances_on_hostile_files_including_invalid_utf8 (tests.test_robustness.FuzzTests.test_pipeline_balances_on_hostile_files_including_invalid_utf8) ... possible schema change: 100% of rows rejected file=binary.log
+possible schema change: 95% of rows rejected file=hostile.log
+possible schema change: 100% of rows rejected file=lines_with_nul.log
+ok
+
+----------------------------------------------------------------------
+Ran 97 tests in 0.858s
+
+OK
