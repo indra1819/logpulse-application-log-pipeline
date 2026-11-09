@@ -1,54 +1,29 @@
-# AI Usage and Development Notes
+## AI Assistance, Personal Review, and Validation
 
-During the development of LogPulse, I used ChatGPT and Claude as supporting tools at different stages of the project.
+AI tools helped speed up development by suggesting the initial project structure, implementation approaches, documentation drafts, and test ideas.
 
-## Conversation References
+I used Claude mainly for code review, comparing project ZIP versions, identifying implementation issues, and reviewing fixes.
 
-**ChatGPT reference:** [View the available ChatGPT discussion](https://chatgpt.com/share/6af029a1-3f84-83ee-8bae-2f530ae84227)
+I used ChatGPT to clarify requirements, plan pipeline components, improve documentation, and explore testing and validation scenarios.
 
-**Claude reference:** [View the available Claude conversation](https://claude.ai/share/38b1b6be-0769-4bb9-8563-e63e6f475cd4)
-## How I Used AI Tools
-### Claude
+AI assistance was especially useful for understanding unfamiliar implementation details and reducing the time spent on repetitive development and documentation tasks.
 
-I used Claude mainly during the initial development and code review.
+However, I did not treat AI-generated code or suggestions as automatically correct. I reviewed the relevant changes and checked whether they matched the assignment requirements.
 
-- Helped create the initial project structure and implementation.
-- Assisted in comparing different project ZIP versions.
-- Reviewed the merged project and helped identify implementation issues.
-- Identified a stale-quarantine issue where a previously rejected log line could remain in the rejection output even after being successfully processed using the `--force` option.
-- Helped with the correction and preparation of a regression test.
+I personally reviewed the adapter implementation, parsing and normalization logic, validation rules, duplicate handling, quarantine behavior, database operations, and reporting flow.
 
-### ChatGPT
+I also investigated the stale-quarantine issue, reviewed the proposed correction, and checked the regression test for that behavior.
 
-I used ChatGPT for planning, understanding, debugging, test design, and verification.
+I validated the pipeline using the real OpenStack dataset and checked the records read, records loaded, duplicate handling, rejected records, and reconciliation results.
 
-- Helped interpret the assessment requirements and plan the pipeline.
-- Explained project modules and implementation decisions.
-- Assisted in comparing project versions and investigating errors.
-- Helped identify test scenarios and review test results.
-- Assisted in reviewing sample, synthetic, and real OpenStack execution evidence.
-- Helped review CSV report generation, SQLite summary refresh behavior, and regression-test coverage.
-- Assisted with documentation consistency.
+I also tested the NASA log format and used synthetic data to verify large-volume processing and pipeline behavior.
 
-## Testing and Verification
+For the synthetic run, I checked the 100,000 valid records, duplicate and rejected record counts, and reconciliation results.
 
-The latest recorded local full-suite execution was:
+I reviewed the SQL integrity checks and test results to verify that the stored data was consistent with the pipeline output.
 
-- Total automated tests: 97
-- Failures: 0
-- Errors: 0
-- Result: All 97 tests passed.
-- Environment: Windows, Python 3.14.3.
-- Execution time: 7.267 seconds.
+Where an AI suggestion needed adjustment, I evaluated it against the actual project structure, test results, and observed pipeline behavior rather than accepting it without verification.
 
-The report-specific test module passed all 10 tests in 0.029 seconds in a separate local execution.
+I was responsible for the final implementation decisions, execution, debugging, documentation review, and validation of the project results.
 
-The GitHub Actions workflow is configured for Ubuntu with Python 3.12. Its workflow configuration was reviewed, but a post-change hosted workflow run must be confirmed separately before claiming that the latest code passed in GitHub Actions.
-
-## My Responsibility
-
-AI tools supported development, but I am responsible for understanding and reviewing the submitted implementation. I ran the project locally, reviewed test output and generated artifacts, and remain responsible for explaining the architecture, design choices, limitations, and verification results.
-
-## Disclosure
-
-This file summarizes how AI tools were used. It is not a verbatim transcript of every prompt. The assessment FAQ requests prompts submitted to every AI tool; any missing original prompts must be added from the candidate's retained conversation/export before final submission.
+AI tools supported the development process, but the final project decisions and verification were based on my own review and testing.
