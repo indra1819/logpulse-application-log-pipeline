@@ -1,3 +1,4 @@
-# logpipe uses only the Python standard library (Python 3.9+; developed and tested on 3.12).
-# Tests use the built-in unittest module, so nothing needs to be installed.
-# Optional: `pip install pytest` also works (pytest can run the unittest-style tests unchanged).
+# LogPulse uses only the Python standard library (Python 3.9+).
+# Developed and tested on Windows with Python 3.14.3 and Linux with Python 3.13.5.
+# Tests use the built-in unittest module, so no additional packages are required.
+# Optional: pip install pytest (pytest can run the unittest-style tests unchanged).
