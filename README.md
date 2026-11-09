@@ -8,13 +8,15 @@ The pipeline supports multiple log formats, detects duplicate events, validates 
 
 Standard library only — no third-party dependencies required.
 
+**Documentation reviewed:** 2026-11-09. Recorded test and validation results are listed below; this date is not a claim that every dataset was rerun.
+
 ---
 
 ## Quick Start
 
 **Requirements:** Python 3.9+
 
-The project was locally tested on Windows using Python 3.14. Commands below use standard Python module execution.
+The project was locally tested on Windows using Python 3.14.3. A separate Linux package verification using Python 3.13.5 is documented in `docs/package_verification.md`. Commands below use standard Python module execution.
 
 If `python` is not recognized, use `py` on Windows or `python3` on macOS/Linux.
 
@@ -58,7 +60,7 @@ Generated outputs are written to `out/`, including:
 
 Committed sample outputs are available in `sample_output/`.
 
-The `--as-of` option fixes the reference time used by future-timestamp validation, making results reproducible across different execution dates. Omit it to use the current time.
+The `--as-of` option fixes the reference time used by future-timestamp validation, making results reproducible across different execution dates. Omit it to use the current time. The `--as-of` value is not the date on which the test was run.
 
 ---
 
@@ -198,6 +200,10 @@ The pipeline also supports Apache Common Log Format (CLF) web-server traces.
 
 Dataset source: [NASA HTTP Dataset — Internet Traffic Archive](https://ita.lbl.gov/html/contrib/NASA-HTTP.html)
 
+**Attribution:** Internet Traffic Archive, NASA Kennedy Space Center WWW server access logs, July 1995.
+
+**Reuse terms:** See the original source page for the dataset's redistribution conditions and any usage restrictions.
+
 Example dataset: `NASA_access_log_Jul95.gz`
 
 The dataset contains approximately 1.9 million lines.
@@ -222,7 +228,7 @@ Damaged or truncated lines are quarantined with their source filename and line n
 
 ---
 
-## Reliability and Verification
+## Reliability and Data Integrity
 
 The pipeline includes safeguards to maintain data integrity during ingestion and repeated execution.
 
@@ -237,11 +243,10 @@ The pipeline includes safeguards to maintain data integrity during ingestion and
 - Failed reconciliation marks the run as `failed`.
 - A failed run returns a non-zero CLI exit code.
 
-### Idempotency
+### Idempotency and Duplicate Handling
 
-- Every normalized event receives a deterministic `event_id`.
-- The event ID is used as the primary key.
-- Duplicate events are not inserted again.
+- Every normalized event receives a deterministic `event_id`, which is used as the primary key.
+- Duplicate events are tracked separately and are not inserted again.
 - Repeated runs do not create duplicate database records.
 
 ### Transaction Safety
@@ -251,13 +256,18 @@ The pipeline includes safeguards to maintain data integrity during ingestion and
 - Other files can continue processing.
 - Failed files are recorded with their failure reasons.
 
-### Retry and Recovery
+### Retry, Restart and Backfill
 
 - Previously processed files are tracked using content hashes.
 - Unchanged files can be skipped during subsequent runs.
 - Failed files can be retried.
 - The `--force` option reprocesses input files.
-- Late-arriving data can be added and processed through a subsequent run.
+- Late-arriving data can be added through a subsequent run.
+- Summaries are rebuilt from stored events so late-arriving data can update earlier time periods.
+- If a previously rejected record becomes valid after a reference-data correction, use `--force` to reprocess the unchanged source file.
+- The pipeline removes stale quarantine entries when previously rejected records are successfully loaded after reprocessing.
+
+Relevant test coverage includes `IdempotencyTests`, `PartialFailureTests`, and `OrderAndLatenessTests`.
 
 For operational guidance, see `docs/runbook.md`.
 
@@ -365,26 +375,6 @@ Latency summaries include:
 Percentiles use the nearest-rank method.
 
 Latency summaries are calculated only for events that contain valid latency values. If a service has no latency measurements, its latency metrics are reported as **N/A**, not zero.
-
----
-
-## Reliability: Idempotency, Retry, Restart and Backfill
-
-The pipeline uses deterministic event identifiers to prevent duplicate database records.
-
-- Reprocessing the same event does not create another event.
-- Duplicate records are recorded separately.
-- Files are tracked through content hashes.
-- File-level transactions protect previously committed data.
-- Failed files can be retried.
-- The `--force` option reprocesses previously processed files.
-- Summaries are rebuilt from the stored events, allowing late-arriving data to correct earlier time periods.
-
-If a previously rejected record becomes valid after a reference-data correction, use `--force` to reprocess the unchanged source file.
-
-The pipeline also removes quarantine entries for records that are successfully loaded after reprocessing.
-
-Relevant test coverage includes `IdempotencyTests`, `PartialFailureTests`, and `OrderAndLatenessTests`.
 
 ---
 
@@ -544,7 +534,7 @@ The following execution measurements were recorded during local validation.
 
 | Dataset | Records read | Execution time | Approx. throughput |
 |---|---:|---:|---:|
-| Full OpenStack dataset | 207,820 | 32.126 seconds | 6,469 records/sec |
+| Full OpenStack dataset | 207,820 | 33.418 seconds | 6,219 records/sec |
 | Synthetic dataset | 107,200 | 15.059 seconds | 7,119 records/sec |
 
 These measurements are environment-specific and are not performance guarantees.
@@ -565,7 +555,7 @@ The full OpenStack dataset was processed using three input files. A separate fre
 | Duplicate records | 1 |
 | Rejected records | 0 |
 | Failed files | 0 |
-| Execution time (earlier Windows run) | 32.126 seconds |
+| Execution time (recorded full run) | 33.418 seconds |
 | Reconciliation | PASS |
 
 ### Data Integrity Validation
@@ -639,6 +629,8 @@ A controlled synthetic dataset was generated to validate duplicate detection, ma
 | orders | 7451.643 | 158 | 783 | 1489 |
 | payments | 8472.004 | 251 | 1208 | 2368 |
 | search | 7629.378 | 102 | 484 | 944 |
+
+The average latency is much higher than the median because a small number of very large, but valid, latency values can skew the mean (the validation limit is 3,600,000 ms). P50, P95 and P99 are more useful for understanding typical and higher-end latency. The exact outlier distribution should be confirmed from the generated data if needed.
 
 ### Testing Approach
 
