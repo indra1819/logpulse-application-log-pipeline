@@ -1,34 +1,21 @@
-# AI Usage Documentation
+# AI Usage
 
-This folder contains the AI usage disclosure and prompt history for the LogPulse – Application Log Processing & Analytics Pipeline project.
+I used ChatGPT and Claude while working on this project. Both tools helped me during different stages of development.
 
-## Documentation Files
+## Files in this Folder
 
-### 1. AI_USAGE.md
+**AI_USAGE.md**
 
-Describes:
-- AI tools used during project development.
-- Contributions made by Claude and ChatGPT.
-- Developer responsibilities for code review, testing, and verification.
-- AI usage transparency statement.
+This file explains how I used AI tools and what work I did myself.
 
-### 2. PROMPT_HISTORY.md
+**PROMPT_HISTORY.md**
 
-Documents:
-- Key prompts used with Claude and ChatGPT.
-- Project development and code review activities.
-- Debugging and corrective prompts.
-- Prompt-to-outcome summary.
-- Recorded testing and execution evidence.
+This file contains the prompts I used with ChatGPT and Claude during the project.
 
-## Purpose
+## My Experience
 
-These documents maintain transparency about how AI tools supported project development, implementation, debugging, testing, and documentation.
+I used AI to understand some concepts, get coding suggestions, fix issues, and improve documentation.
 
-## Developer Responsibility
+I also checked the suggested changes and tested the project myself. I worked on debugging issues and verified the pipeline using real and synthetic datasets.
 
-The developer is responsible for reviewing AI-generated suggestions, understanding the implementation, executing the project, validating results, and ensuring that all submitted claims are supported by actual evidence.
-
-## Prompt-history note
-
-`PROMPT_HISTORY.md` contains organised summaries of the key prompts and activities. It is not a verbatim export of every AI conversation. Where original prompt wording was not retained, the entry is identified as a reconstructed summary. Add any remaining original prompts available from the AI tools before submission.
+AI helped me during development, but I was responsible for checking the code and final results.
